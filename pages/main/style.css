@@ -128,8 +128,13 @@
   margin: 0 auto;
 }
 .card {
+  border-radius: 9px;
   background: #fafafa;
   padding: 30px 35px;
+  margin-right: 90px;
+}
+.card:last-child {
+  margin-right: 0;
 }
 .card__img {
   width: 200px;
@@ -146,4 +151,57 @@
 .our-friends__btn {
   width: 261px;
   height: 52px;
+}
+.in-addition {
+  background: #f6f6f6;
+}
+.in-addition__wrapper {
+  display: flex;
+  margin: 0 auto;
+}
+.help {
+  padding: 80px 127px 100px;
+}
+.help__icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.help__icon {
+  display: flex;
+  flex-direction: column;
+}
+.help__image {
+  max-width: 60px;
+  max-height: 60px;
+}
+.help__text {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.in-addition__image {
+  width: 505px;
+  height: 261px;
+}
+.footer {
+  padding-top: 40px;
+  background: url(noise_lines_transparent@2X.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.footer_img {
+  width: 300px;
+  height: 310px;
 }
