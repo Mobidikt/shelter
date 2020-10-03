@@ -256,6 +256,9 @@
 .in-addition {
   box-sizing: border-box;
   height: 464px;
+  display: flex;
+  justify-content: center;
+  padding-top: 82px;
   background: #f6f6f6;
 }
 .in-addition__wrapper {
@@ -265,14 +268,65 @@
 .in-addition__image {
   width: 505px;
   height: 261px;
+  margin: 10px 30px 0 0;
+}
+.in-addition__info {
+  width: 380px;
 }
 .in-addition__title {
+  width: 300px;
+  margin: 0 0 20px;
+  padding: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
+}
+.in-addition__subtitle {
+  margin: 0 0 20px;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.credit-card {
+  box-sizing: border-box;
+  background: #f1cdb3;
+  border-radius: 9px;
+  padding: 10px 15px 10px 14px;
+  width: 349px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.credit-card__img {
+  margin-right: 15px;
+}
+.credit-card__number {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.in-addition__text {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #b2b2b2;
 }
 .footer {
   padding: 40px 40px 0;
