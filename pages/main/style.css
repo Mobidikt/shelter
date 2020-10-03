@@ -71,9 +71,13 @@
 }
 .not-only__info {
   width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .not-only__title {
-  margin: 0;
+  width: 310px;
+  margin: -82px 0 42px;
   color: #ffffff;
   font-family: Georgia;
   font-style: normal;
@@ -82,13 +86,30 @@
   line-height: 130%;
 }
 .not-only__text {
+  padding: 0;
+  margin: 0 0 41px;
   color: #cdcdcd;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
 }
 .not-only__btn {
   width: 207px;
   height: 52px;
+  background: #f1cdb3;
+  border-radius: 100px;
+  border: none;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 130%;
+  color: #292929;
 }
 .not-only__image {
+  background-image: url(../../assets/images/start-screen-puppy.png);
   width: 698px;
   height: 728px;
 }
@@ -156,6 +177,12 @@
   margin: 0 auto 60px;
   width: 400px;
   text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 .slider {
   display: flex;
@@ -186,19 +213,22 @@
   width: 261px;
   height: 52px;
 }
-.in-addition {
-  box-sizing: border-box;
-  height: 611px;
-  background: #f6f6f6;
-}
-.in-addition__wrapper {
-  display: flex;
-  margin: 0 auto;
-}
 .help {
   box-sizing: border-box;
-  height: 464px;
+  height: 611px;
   padding: 80px 127px 100px;
+}
+.help__title {
+  margin: 0 auto;
+  width: 310px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 .help__icons {
   display: flex;
@@ -223,9 +253,26 @@
   letter-spacing: 0.06em;
   color: #545454;
 }
+.in-addition {
+  box-sizing: border-box;
+  height: 464px;
+  background: #f6f6f6;
+}
+.in-addition__wrapper {
+  display: flex;
+  margin: 0 auto;
+}
 .in-addition__image {
   width: 505px;
   height: 261px;
+}
+.in-addition__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 .footer {
   padding: 40px 40px 0;
@@ -247,7 +294,6 @@
 }
 .footer__info {
   max-width: 302px;
-  /* margin-right: 139px; */
 }
 .footer__info:last-of-type {
   margin-right: 22px;

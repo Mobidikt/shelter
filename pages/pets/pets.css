@@ -1,0 +1,129 @@
+.root {
+  font-family: Georgia;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 60px;
+  width: 1200px;
+  margin: 60px auto 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo__header {
+  font-family: Georgia;
+  color: #f1cdb3;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 110%;
+  align-items: center;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px 0;
+}
+.logo__subtitle {
+  font-family: Arial;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: 0.1em;
+  margin: 0 4px;
+}
+.header-navbar {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  text-decoration: none;
+  font-family: Arial;
+  margin: -4px 35px 0 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+.nav__item:last-child {
+  margin-right: 0;
+}
+.current {
+  color: #fafafa;
+  border-bottom: 3px solid #f1cdb3;
+}
+.footer {
+  padding: 40px 40px 0;
+  background: url(../../assets/images/noise_transparent@2x.svg),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+  background-repeat: repeat;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.footer__info_wraper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.footer__info {
+  max-width: 302px;
+  /* margin-right: 139px; */
+}
+.footer__info:last-of-type {
+  margin-right: 22px;
+}
+.footer__title {
+  margin: 18px 0 38px;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.footer__title_adress {
+  margin-bottom: 32px;
+}
+.footer__icon {
+  margin-right: 20px;
+}
+.footer__text {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+.footer__info_adress {
+  margin-bottom: 32px;
+}
+.footer_img {
+  width: 300px;
+  height: 310px;
+}
+@font-face {
+  font-family: Georgia;
+  font-display: swap;
+  font-weight: 400;
+  src: url(../../assets/fonts/Georgia.woff) format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../../assets/fonts/Georgia-Bold.woff) format("woff");
+  font-weight: bold;
+}
