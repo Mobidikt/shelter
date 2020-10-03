@@ -11,19 +11,47 @@
   justify-content: space-between;
 }
 .logo__header {
+  font-family: Georgia;
   color: #f1cdb3;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 110%;
+  align-items: center;
+  letter-spacing: 0.06em;
   margin: 0 0 10px 0;
 }
 .logo__subtitle {
+  font-family: Arial;
   color: #ffffff;
-  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: 0.1em;
+  margin: 0 4px;
+}
+.header-navbar {
+  display: flex;
+  align-items: center;
 }
 .nav__item {
-  color: #fafafa;
-  margin: 0 35px 0 0;
+  text-decoration: none;
+  font-family: Arial;
+  margin: -4px 35px 0 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
 }
 .nav__item:last-child {
   margin-right: 0;
+}
+.current {
+  color: #fafafa;
+  border-bottom: 3px solid #f1cdb3;
 }
 .not-only {
   box-sizing: border-box;
@@ -258,7 +286,7 @@
   height: 310px;
 }
 @font-face {
-  font-family: "Georgia";
+  font-family: Georgia;
   font-display: swap;
   font-weight: 400;
   src: url(../../assets/fonts/Georgia.woff) format("woff");
@@ -266,7 +294,7 @@
 }
 
 @font-face {
-  font-family: "Georgia";
+  font-family: Georgia;
   font-style: normal;
   font-weight: 900;
   font-display: swap;
