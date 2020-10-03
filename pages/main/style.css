@@ -160,7 +160,7 @@
 }
 .our-friends {
   box-sizing: border-box;
-  padding: 80px 0 100px;
+  padding: 80px 40px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,33 +185,86 @@
   color: #545454;
 }
 .slider {
+  width: 100%;
   display: flex;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 60px;
+}
+.btn {
+  height: 52px;
+  width: 52px;
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+.btn__left {
+  background-image: url(../../assets/images/btn__left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn__right {
+  background-image: url(../../assets/images/btn__right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .card {
+  box-sizing: border-box;
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 9px;
   background: #fafafa;
-  padding: 30px 35px;
-  margin-right: 90px;
+  padding: 0;
+  margin-right: 40px;
 }
-.card:last-child {
+.card:last-of-type {
   margin-right: 0;
 }
 .card__img {
-  width: 200px;
-  height: 240px;
+  width: 270px;
+  height: 270px;
   margin: 0;
 }
 .card__title {
-  margin: 30px auto 30px;
+  margin: 30px 0;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 .card__btn {
   height: 52px;
   width: 187px;
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  color: #292929;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  background-color: transparent;
 }
 .our-friends__btn {
+  box-sizing: border-box;
   width: 261px;
   height: 52px;
+  background: #f1cdb3;
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border: none;
 }
 .help {
   box-sizing: border-box;
