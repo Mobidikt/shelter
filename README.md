@@ -12,7 +12,7 @@
 
 - сверстать страницы "Help the shelter" и "Contacts";
 
-- страницы "About the shelter", "Help the shelter" и "Contacts" сделать даптивными;
+- страницы "About the shelter", "Help the shelter" и "Contacts" сделать aдаптивными;
 
 - разбить css файлы по БЭМ;
 
