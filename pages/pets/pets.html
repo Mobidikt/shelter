@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our-pets</title>
     <link rel="stylesheet" href="./pets.css" />
+    <link rel="stylesheet" href="./carousel.css" />
   </head>
   <body class="root">
     <header class="header">
@@ -13,6 +14,7 @@
           <h1 class="logo__header">Cozy House</h1>
           <p class="logo__subtitle">Shelter for pets in Boston</p>
         </div>
+        <button class="header__btn-menu"></button>
         <nav class="header-navbar">
           <a class="nav__item nav__item_about" href="../main/index.html"
             >About the shelter</a
@@ -31,7 +33,9 @@
           Our friends who <br />are looking for a house
         </h2>
         <div class="our-friends__content">
-          <div class="card">
+          <div class="carousel">
+            <div class="items-container">
+          <div class="card active">
             <img
               class="card__img"
               src="../../assets/images/pets/pets-katrine.png"
@@ -103,13 +107,15 @@
             <h5 class="card__title">Freddle</h5>
             <button class="card__btn">Learn more</button>
           </div>
+          </div>
+          </div>
         </div>
         <div class="our-friends__btns">
-          <button class="our-friends__btn btn__disable"><<</button>
-          <button class="our-friends__btn btn__disable"><</button>
-          <button class="our-friends__btn btn__number">1</button>
-          <button class="our-friends__btn btn__active">></button>
-          <button class="our-friends__btn btn__active">>></button>
+          <button type="button" class="our-friends__btn btn__disable"><<</button>
+          <button type="button" class="our-friends__btn btn__left btn__disable"><</button>
+          <button type="button" class="our-friends__btn btn__number">1</button>
+          <button type="button" class="our-friends__btn btn__right btn__active">></button>
+          <button type="button" class="our-friends__btn btn__active">>></button>
         </div>
       </section>
     </main>
@@ -159,5 +165,19 @@
         />
       </div>
     </footer>
+     <template class="card-template">
+      <li class="card">
+        <img
+              class="card__img"
+              src="#"
+              alt="image"
+            />
+            <h5 class="card__title"></h5>
+            <button class="card__btn">Learn more</button>
+      </li>
+    </template>
+    <script type="text/javascript" src="./pets.json"></script>
+    <script type="module" src="./pets.js"></script>
+    <script type="module" src="./carousel.js"></script>
   </body>
 </html>

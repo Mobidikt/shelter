@@ -6,9 +6,10 @@
 .header {
   box-sizing: border-box;
   height: 60px;
-  margin: 60px auto 0px;
+  margin: 30px auto 0px;
 }
 .header__wrapper {
+  padding-top: 62px;
   box-sizing: border-box;
   height: 100%;
   max-width: 1200px;
@@ -65,25 +66,60 @@
   color: #fafafa;
   border-bottom: 3px solid #f1cdb3;
 }
+.header__btn-menu{
+  margin-right: 43px;
+  width: 30px;
+  height: 22px;
+  background-image: url(../../assets/images/btn-menu_main.svg);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.header__btn-menu_active{
+  transform: rotate(90deg);
+}
 @media screen and (max-width: 1260px) {
-  .header {
-    margin-top: 30px;
-  }
   .header__wrapper {
-    padding: 0 30px 0px;
+    padding: 2px 30px 0px;
   }
 }
 @media screen and (max-width: 700px) {
   .header__wrapper {
-    padding: 0 10px 0px;
+    padding: 30px 10px 0px;
+    flex-wrap: wrap;
   }
   .header-navbar {
+    margin-top: 164px;
+    flex-direction: column;
+    height: 733px;
+    width: 100%; 
     display: none;
   }
+  .nav__item{
+    font-size: 32px;
+    line-height: 160%;
+    margin-bottom: 44px;
+    margin-right: 0;
+  }
+  .header__btn-menu{
+    display: block;
+  }
+  .header {
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
+}
+.header-navbar_active {
+  display: flex;
+}
+.header__wrapper_active {
+  position: absolute;
+    background-color: #292929;
+  }
 .not-only {
   box-sizing: border-box;
-  padding: 180px 40px 0;
+  padding: 210px 40px 0;
   margin: -120px auto 0px;
   width: 100%;
   min-height: 908px;
@@ -173,6 +209,7 @@
     font-size: 25px;
     text-align: center;
     letter-spacing: 0.06em;
+    margin: -82px auto 42px;
   }
   .not-only__text {
     text-align: center;
@@ -323,12 +360,10 @@
   border-radius: 9px;
   background: #fafafa;
   padding: 0;
-  margin-left: 40px;
-  margin-right: 40px;
 }
-.card:last-of-type {
+/* .card:last-of-type {
   margin-right: 0;
-}
+} */
 .card:hover {
   cursor: pointer;
 }
@@ -346,6 +381,7 @@
   line-height: 23px;
   letter-spacing: 0.06em;
   color: #545454;
+  max-width: 100px;
 }
 .card__btn {
   outline: none;
@@ -385,30 +421,42 @@
   color: #292929;
   border: none;
 }
+.multiple-items{
+  max-width: 1080px;
+  width: 90%;
+  margin-bottom: 60px;
+}
+/* .slick-prev
+{
+    left: -5.5%;
+    background-image: url(../../../assets/images/btn__left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 @media screen and (max-width: 1200px) {
   .our-friends {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .card:nth-of-type(1) {
+  /* .card:nth-of-type(1) {
     margin-right: 0;
     margin-left: 12px;
-  }
-  .card:nth-of-type(3) {
+  } */
+  /* .card:nth-of-type(3) {
     display: none;
-  }
+  /* } 
   .card:nth-of-type(2) {
     margin-right: 12px;
-  }
+  } */
 }
 @media screen and (max-width: 767px) {
-  .card:nth-of-type(2) {
+  /* .card:nth-of-type(2) {
     display: none;
-  }
-  .card:nth-of-type(1) {
+  } */
+  /* .card:nth-of-type(1) {
     margin-left: 0;
     margin-right: 0;
-  }
+  } */
 }
 @media screen and (max-width: 460px) {
   .our-friends {
@@ -437,6 +485,18 @@
     display: flex;
     justify-content: space-between;
   }
+  .multiple-items{
+  margin-bottom: 115px;
+}
+.slick-prev
+{ 
+  top: 110%;
+    left: 15.5%;}
+    .slick-next
+{
+  top: 110%;
+    right: 15.5%;
+}
 }
 
 .help {
@@ -575,7 +635,7 @@
   background: #f1cdb3;
   border-radius: 9px;
   padding: 10px 15px 10px 14px;
-  width: 349px;
+  max-width: 349px;
   height: 43px;
   display: flex;
   align-items: center;
@@ -604,7 +664,7 @@
   line-height: 18px;
   color: #b2b2b2;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .in-addition__wrapper {
     flex-direction: column;
     align-items: center;
@@ -739,11 +799,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.contacts_adres {
+.contacts_adress {
   margin-left: 41px;
   margin-top: 10px;
 }
-.contacts_adres:before {
+.contacts_adress:before {
   position: absolute;
   content: "";
   width: 22px;
@@ -807,6 +867,21 @@
   }
   .contacts_phone:before {
     left: 30px;
+  }
+  .footer__title_adress {
+    max-width: 294px;
+  margin-bottom: 43px;
+}
+.footer__info_adress {
+  margin-bottom: 45px;
+}
+.footer__info_adress:last-of-type {
+  margin-bottom: -7px;
+}
+.footer_img {
+  align-self: center;
+    height: 269px;
+    width:  260px;
   }
 }
 
