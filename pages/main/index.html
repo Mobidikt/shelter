@@ -4,34 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cozy House</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/slick-1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="root">
     <header class="header">
-      <div class="logo">
-        <h1 class="logo__header">Cozy House</h1>
-        <p class="logo__subtitle">Shelter for pets in Boston</p>
+      <div class="header__wrapper">
+        <div class="logo">
+          <h1 class="logo__header">Cozy House</h1>
+          <p class="logo__subtitle">Shelter for pets in Boston</p>
+        </div>
+        <button class="header__btn-menu"></button>
+        <nav class="header-navbar">
+          <a class="nav__item nav__item_about work current" href="../main/index.html"
+            >About the shelter</a
+          >
+          <a class="nav__item nav__item_our work" href="../pets/pets.html"
+            >Our pets</a
+          >
+          <a class="nav__item nav__item_help" href="#">Help the shelter</a>
+          <a class="nav__item nav__item_contacts" href="#">Contacts</a>
+        </nav>
       </div>
-      <nav class="header-navbar">
-        <a class="nav__item nav__item_about current" href="../main/index.html"
-          >About the shelter</a
-        >
-        <a class="nav__item nav__item_our" href="../pets/pets.html">Our pets</a>
-        <a class="nav__item nav__item_help" href="#">Help the shelter</a>
-        <a class="nav__item nav__item_contacts" href="#">Contacts</a>
-      </nav>
     </header>
     <main>
       <section class="not-only">
         <div class="not-only__wrapper">
           <div class="not-only__info">
-            <h2 class="not-only__title">Not only people need a house</h2>
+            <h2 class="not-only__title">
+              Not only people<br />
+              need a house
+            </h2>
             <p class="not-only__text">
               We offer to give a chance to a little and nice puppy with an
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </p>
-            <button class="not-only__btn">Make a friend</button>
+            <a class="not-only__btn" href="../pets/pets.html">Make a friend</a>
           </div>
           <div class="not-only__image"></div>
         </div>
@@ -67,41 +77,15 @@
         <h3 class="our-friends__title">
           Our friends who <br />are looking for a house
         </h3>
-        <div class="slider">
-          <button class="btn btn__left"></button>
-          <div class="card">
-            <img
-              class="card__img"
-              src="../../assets/images/pets/pets-katrine.png"
-              alt="image"
-            />
-            <h5 class="card__title">Katrine</h5>
-            <button class="card__btn">Learn more</button>
-          </div>
-          <div class="card">
-            <img
-              class="card__img"
-              src="../../assets/images/pets/pets-jennifer.png"
-              alt="image"
-            />
-            <h5 class="card__title">Jennifer</h5>
-            <button class="card__btn">Learn more</button>
-          </div>
-          <div class="card">
-            <img
-              class="card__img"
-              src="../../assets/images/pets/pets-woody.png"
-              alt="image"
-            />
-            <h5 class="card__title">Woody</h5>
-            <button class="card__btn">Learn more</button>
-          </div>
-          <button class="btn btn__right"></button>
+        <div class="multiple-items">
         </div>
-        <button class="our-friends__btn">Get to know the rest</button>
+        <a class="our-friends__btn" href="../pets/pets.html">Get to know the rest</a>
       </section>
       <section class="help">
-        <h3 class="help__title">How you can help our shelter</h3>
+        <h3 class="help__title">
+          How you can help<br />
+          our shelter
+        </h3>
         <div class="help__icons">
           <div class="help__icon">
             <img
@@ -185,7 +169,10 @@
             alt="image"
           />
           <div class="in-addition__info">
-            <h3 class="in-addition__title">You can also make a donation</h3>
+            <h3 class="in-addition__title">
+              You can also<br />
+              make a donation
+            </h3>
             <p class="in-addition__subtitle">
               Name of the bank / Type of bank account
             </p>
@@ -233,7 +220,7 @@
             <a
               href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263?hl=ru"
               target="_blank"
-              class="footer__text contacts_adres"
+              class="footer__text contacts_adress"
             >
               1 Central Street, Boston (entrance from the store)
             </a>
@@ -242,7 +229,7 @@
             <a
               href="https://www.google.com/maps/search/18+South+Park,+London/@51.5287718,-0.2416802,11z/data=!3m1!4b1?hl=ru"
               target="_blank"
-              class="footer__text contacts_adres"
+              class="footer__text contacts_adress"
               >18 South Park, London</a
             >
           </div>
@@ -254,5 +241,62 @@
         />
       </div>
     </footer>
+   <div class="popup">
+        <div class="popup__container">  
+            <img class="popup__img" src="#" alt="image">
+            <div class="popup__info">
+              <h3 class="popup__title"> </h3>
+              <h4 class="popup__subtitle"></h4>
+              <p class="popup__text"></p>
+              <ul class="pet__infos">
+                <li class="pet__info popup__age">Age: <span class="age"></span></li>
+                <li class="pet__info popup__inoculations">Inoculations: <span class="inoculations"></span></li>
+                <li class="pet__info popup__diseases">Diseases: <span class="diseases"></span></li>
+                <li class="pet__info popup__parasites">Parasites: <span class="parasites"></span></li>
+              </ul>
+            </div>
+          <button type="button" class="popup__close"></button>
+        </div>
+      </div>
+
+    <template class="card-template">
+        <div class="card-wrapper">
+          <div class="card">
+            <img
+              class="card__img"
+              src="#"
+              alt="image"
+            />
+            <h5 class="card__title"></h5>
+            <button class="card__btn">Learn more</button>
+          </div>
+        </div>
+    </template>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../../assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+      $('.multiple-items').slick({
+        slidesToShow:3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 750,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    </script>     
   </body>
 </html>
