@@ -46,16 +46,16 @@
   border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
-  z-index: 5;
+  
 }
 .slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
+
+.slick-next:hover
+
 {
     border: none;
     cursor: pointer;
-  background: #fddcc4;
+  background-color: #fddcc4;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

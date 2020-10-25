@@ -17,10 +17,10 @@
         </div>
         <button class="header__btn-menu"></button>
         <nav class="header-navbar">
-          <a class="nav__item nav__item_about current" href="../main/index.html"
+          <a class="nav__item nav__item_about work current" href="../main/index.html"
             >About the shelter</a
           >
-          <a class="nav__item nav__item_our" href="../pets/pets.html"
+          <a class="nav__item nav__item_our work" href="../pets/pets.html"
             >Our pets</a
           >
           <a class="nav__item nav__item_help" href="#">Help the shelter</a>
@@ -41,7 +41,7 @@
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </p>
-            <button class="not-only__btn">Make a friend</button>
+            <a class="not-only__btn" href="../pets/pets.html">Make a friend</a>
           </div>
           <div class="not-only__image"></div>
         </div>
@@ -79,7 +79,7 @@
         </h3>
         <div class="multiple-items">
         </div>
-        <button class="our-friends__btn">Get to know the rest</button>
+        <a class="our-friends__btn" href="../pets/pets.html">Get to know the rest</a>
       </section>
       <section class="help">
         <h3 class="help__title">
@@ -241,6 +241,23 @@
         />
       </div>
     </footer>
+   <div class="popup">
+        <div class="popup__container">  
+            <img class="popup__img" src="#" alt="image">
+            <div class="popup__info">
+              <h3 class="popup__title"> </h3>
+              <h4 class="popup__subtitle"></h4>
+              <p class="popup__text"></p>
+              <ul class="pet__infos">
+                <li class="pet__info popup__age">Age: <span class="age"></span></li>
+                <li class="pet__info popup__inoculations">Inoculations: <span class="inoculations"></span></li>
+                <li class="pet__info popup__diseases">Diseases: <span class="diseases"></span></li>
+                <li class="pet__info popup__parasites">Parasites: <span class="parasites"></span></li>
+              </ul>
+            </div>
+          <button type="button" class="popup__close"></button>
+        </div>
+      </div>
 
     <template class="card-template">
         <div class="card-wrapper">
