@@ -2,6 +2,8 @@
 
 ## 2-х страничный сайт.
 
+https://mobidikt.github.io/shelter/pages/main/
+
 Выполнено:
 
 - сверсаты страницы "About the shelter" и "Our pets";
