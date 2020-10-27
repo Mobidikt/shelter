@@ -1,142 +1,6 @@
 // import {pets} from './pets.js';
 // import {Card} from '../../Card.js';
 // import {Section} from '../../Section.js';
-const cardTemplate = document
-  .querySelector(".card-template")
-  .content.querySelector(".card-wrapper");
-const headerBtn = document.querySelector('.header__btn-menu');
-const headerNav = document.querySelector('.header-navbar');
-const headerWrapper = document.querySelector('.header__wrapper');
-const elementList = document.querySelector(".multiple-items");
-let cardList = '';
-const popupCards = document.querySelector('.popup')
-
-const handleHeaderBtn =() =>{
-    headerBtn.classList.toggle('header__btn-menu_active');
-    headerNav.classList.toggle('header-navbar_active');
-    headerWrapper.classList.toggle('header__wrapper_active');
-    console.log(headerBtn.classList);
-    if(headerNav.classList.contains('header-navbar_active')){
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-}
-
-
-class Popup {
-  constructor(popupSelector) {
-    this._popup = popupSelector;
-    this._closeButton = this._popup.querySelector(".popup__close");
-    this._handleEscClose = this._handleEscClose.bind(this);
-    this._overlayClose = this._overlayClose.bind(this);
-  }
-
-  _handleEscClose(e) {
-    if (e.key === "Escape") {
-      this.close();
-    }
-  }
-  _overlayClose(e) {
-    if (e.target.classList.contains("popup")) {
-      this.close();
-    }
-  }
-  setEventListeners() {
-    this._closeButton.addEventListener("click", () => this.close());
-  }
-
-  open() {
-    this._popup.classList.add("popup_opened");
-    document.addEventListener("keydown", this._handleEscClose);
-    document.addEventListener("click", this._overlayClose);
-  }
-
-  close() {
-    this._popup.classList.remove("popup_opened");
-    document.removeEventListener("keydown", this._handleEscClose);
-    document.removeEventListener("click", this._overlayClose);
-    document.body.style.overflow = 'auto';
-  }
-}
-const popupCard = new Popup(popupCards);
-popupCard.setEventListeners();
-const popupImg = popupCards.querySelector('.popup__img');
-const popupDescription = popupCards.querySelector('.popup__text');
-const popupSubtitle = popupCards.querySelector('.popup__subtitle');
-const popupTitle = popupCards.querySelector('.popup__title');
-const popupAge = popupCards.querySelector('.age');
-const popupInoculations = popupCards.querySelector('.inoculations');
-const popupDiseases = popupCards.querySelector('.diseases');
-const popupParasites = popupCards.querySelector('.parasites');
-
-function handleCardClick(data){
-  popupCard.open()
-  popupImg.src = data.link;
-  popupTitle.textContent = `${data.name}`;
-  popupSubtitle.textContent = `${data.type}`;
-  popupDescription.textContent = `${data.description}`;
-  popupAge.textContent = `${data.age}`;
-  popupInoculations.textContent = `${data.inoculations}`;
-  popupDiseases.textContent = `${data.diseases}`;
-  popupParasites.textContent = `${data.parasites}`;
-  document.body.style.overflow = 'hidden';
-}
-
-class Card {
-  constructor({
-    card,
-    cardTemplate, 
-    handleCardClick
-  }) {
-    this._link = card.img;
-    this._name = card.name;
-    this._type = card.type;
-    this._breed = card.breed;
-    this._description = card.description;
-    this._age = card.age;
-    this._inoculations = card.inoculations;
-    this._diseases = card.diseases;
-    this._parasites = card.parasites;
-    this._template = cardTemplate;
-    this._open = handleCardClick;
-  }
-
-  _getTemplate() {
-    return this._template.cloneNode(true);
-  }
-  _openPopup() {
-    this._open({link: this._link, name: this._name, type: this._type, age: this._age, description: this._description, inoculations: this._inoculations, diseases: this._diseases, parasites: this._parasites});
-  }
-  _setEventListeners() {
-    this._card.querySelector('.card').addEventListener("click", () => this._openPopup()); //реализация попап картинки
-  }
-  createCard() {
-    this._card = this._getTemplate();
-    this._image = this._card.querySelector(".card__img");
-    this._card.querySelector(".card__title").textContent = this._name;
-    this._image.src = this._link;
-    this._image.alt = this._name;
-    this._setEventListeners();
-    return this._card;
-  }
-}
-
-class Section {
-  constructor({ data, renderer }, containerSelector) {
-    this._items = data;
-    this._renderer = renderer;
-    this._container = containerSelector;
-  }
-  renderer() {
-    this._items.forEach((item) => {
-      this._renderer(item);
-    });
-  }
-  addItem(element) {
-    this._container.prepend(element);
-  }
-}
 
 const pets =[{
     "name": "Jennifer",
@@ -226,8 +90,142 @@ const pets =[{
     "diseases": ["deafness", "blindness"],
     "parasites": ["lice", "fleas"]
   }
-  ] 
+  ] ;
+const cardTemplate = document
+  .querySelector(".card-template")
+  .content.querySelector(".card-wrapper");
+const headerBtn = document.querySelector('.header__btn-menu');
+const headerNav = document.querySelector('.header-navbar');
+const headerWrapper = document.querySelector('.header__wrapper');
+const elementList = document.querySelector(".multiple-items");
+let cardList = '';
+const popupCards = document.querySelector('.popup')
 
+
+
+class Popup {
+  constructor(popupSelector) {
+    this._popup = popupSelector;
+    this._closeButton = this._popup.querySelector(".popup__close");
+    this._handleEscClose = this._handleEscClose.bind(this);
+    this._overlayClose = this._overlayClose.bind(this);
+  }
+
+  _handleEscClose(e) {
+    if (e.key === "Escape") {
+      this.close();
+    }
+  }
+  _overlayClose(e) {
+    if (e.target.classList.contains("popup")) {
+      this.close();
+    }
+  }
+  setEventListeners() {
+    this._closeButton.addEventListener("click", () => this.close());
+  }
+
+  open() {
+    this._popup.classList.add("popup_opened");
+    document.addEventListener("keydown", this._handleEscClose);
+    document.addEventListener("click", this._overlayClose);
+  }
+
+  close() {
+    this._popup.classList.remove("popup_opened");
+    document.removeEventListener("keydown", this._handleEscClose);
+    document.removeEventListener("click", this._overlayClose);
+    document.body.style.overflow = 'auto';
+  }
+};
+
+class Card {
+  constructor({
+    card,
+    cardTemplate, 
+    handleCardClick
+  }) {
+    this._link = card.img;
+    this._name = card.name;
+    this._type = card.type;
+    this._breed = card.breed;
+    this._description = card.description;
+    this._age = card.age;
+    this._inoculations = card.inoculations;
+    this._diseases = card.diseases;
+    this._parasites = card.parasites;
+    this._template = cardTemplate;
+    this._open = handleCardClick;
+  }
+
+  _getTemplate() {
+    return this._template.cloneNode(true);
+  }
+  _openPopup() {
+    this._open({link: this._link, name: this._name, type: this._type, age: this._age, description: this._description, inoculations: this._inoculations, diseases: this._diseases, parasites: this._parasites});
+  }
+  _setEventListeners() {
+    this._card.querySelector('.card').addEventListener("click", () => this._openPopup()); //реализация попап картинки
+  }
+  createCard() {
+    this._card = this._getTemplate();
+    this._image = this._card.querySelector(".card__img");
+    this._card.querySelector(".card__title").textContent = this._name;
+    this._image.src = this._link;
+    this._image.alt = this._name;
+    this._setEventListeners();
+    return this._card;
+  }
+};
+
+class Section {
+  constructor({ data, renderer }, containerSelector) {
+    this._items = data;
+    this._renderer = renderer;
+    this._container = containerSelector;
+  }
+  renderer() {
+    this._items.forEach((item) => {
+      this._renderer(item);
+    });
+  }
+  addItem(element) {
+    this._container.prepend(element);
+  }
+};
+const popupCard = new Popup(popupCards);
+const popupImg = popupCards.querySelector('.popup__img');
+const popupDescription = popupCards.querySelector('.popup__text');
+const popupSubtitle = popupCards.querySelector('.popup__subtitle');
+const popupTitle = popupCards.querySelector('.popup__title');
+const popupAge = popupCards.querySelector('.age');
+const popupInoculations = popupCards.querySelector('.inoculations');
+const popupDiseases = popupCards.querySelector('.diseases');
+const popupParasites = popupCards.querySelector('.parasites');
+const handleHeaderBtn =() =>{
+    headerBtn.classList.toggle('header__btn-menu_active');
+    headerNav.classList.toggle('header-navbar_active');
+    headerWrapper.classList.toggle('header__wrapper_active');
+    console.log(headerBtn.classList);
+    if(headerNav.classList.contains('header-navbar_active')){
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+};
+
+function handleCardClick(data){
+  popupCard.open()
+  popupImg.src = data.link;
+  popupTitle.textContent = `${data.name}`;
+  popupSubtitle.textContent = `${data.type}`;
+  popupDescription.textContent = `${data.description}`;
+  popupAge.textContent = `${data.age}`;
+  popupInoculations.textContent = `${data.inoculations}`;
+  popupDiseases.textContent = `${data.diseases}`;
+  popupParasites.textContent = `${data.parasites}`;
+  document.body.style.overflow = 'hidden';
+};
 
 function addCard(card) {
   return new Card({
@@ -235,7 +233,8 @@ function addCard(card) {
     cardTemplate,
     handleCardClick
   }).createCard();
-}
+};
+
 function init(pets) {
   cardList = new Section(
     {
@@ -248,7 +247,8 @@ function init(pets) {
     elementList
   );
   cardList.renderer();
+};
 
-}
 init(pets)
 headerBtn.addEventListener('click', handleHeaderBtn);
+popupCard.setEventListeners();
