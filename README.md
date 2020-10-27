@@ -1,21 +1,21 @@
-# Проектная работа "shelter" RS School.
+# Shelter
 
-## 4-х страничный сайт.
+## 2-х страничный сайт.
 
 Выполнено:
 
-- сделаны страницы "About the shelter" и "Our pets";
+- сверсаты страницы "About the shelter" и "Our pets";
 
-- страница "Our pets" адаптивна;
+- страницы "About the shelter" и "Our pets" адаптивна;
+
+- подключена карусель к странице About the shelter".
 
 Доработка:
 
-- сверстать страницы "Help the shelter" и "Contacts";
-
-- страницы "About the shelter", "Help the shelter" и "Contacts" сделать aдаптивными;
-
 - разбить css файлы по БЭМ;
 
-- подключить JS;
+- разбить JS файлы;
+
+- подключить карусель к странице "Our pets";
 
 - использовать Webpack для сборки сайта.

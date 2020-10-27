@@ -52,7 +52,7 @@ class Popup {
   }
 }
 const popupCard = new Popup(popupCards);
-popupCard.setEventListeners();
+
 const popupImg = popupCards.querySelector('.popup__img');
 const popupDescription = popupCards.querySelector('.popup__text');
 const popupSubtitle = popupCards.querySelector('.popup__subtitle');
@@ -244,3 +244,4 @@ function init(pets) {
 }
 init(pets)
 headerBtn.addEventListener('click', handleHeaderBtn);
+popupCard.setEventListeners();
